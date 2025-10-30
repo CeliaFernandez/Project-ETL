@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Self Trigger Lablog - CodiMD
+    </title>
+    <link rel="icon" type="image/png" href="https://codimd.web.cern.ch/favicon.png">
+    <link rel="apple-touch-icon" href="https://codimd.web.cern.ch/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha256-H0KfTigpUV+0/5tn2HXC0CPwhhDhWgSawJdnFd0CGCo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.3/css/fork-awesome.min.css" integrity="sha256-ZhApazu+kejqTYhMF+1DzNKjIzP7KXu6AzyXcC1gMus=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" integrity="sha256-tAflq+ymku3Khs+I/WcAneIlafYgDiOQ9stIHH985Wo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,300italic,300|Source+Serif+Pro|Source+Code+Pro:400,300,500&subset=latin,latin-ext);.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{padding:0 1em;color:#777;border-left:.25em solid #ddd}.night .markdown-body blockquote{color:#bcbcbc}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.night .markdown-body h1,.night .markdown-body h2,.night .markdown-body h3,.night .markdown-body h4,.night .markdown-body h5,.night .markdown-body h6{color:#ddd}.markdown-body h1 .fa-link,.markdown-body h2 .fa-link,.markdown-body h3 .fa-link,.markdown-body h4 .fa-link,.markdown-body h5 .fa-link,.markdown-body h6 .fa-link{color:#000;vertical-align:middle;visibility:hidden;font-size:16px}.night .markdown-body h1 .fa-link,.night .markdown-body h2 .fa-link,.night .markdown-body h3 .fa-link,.night .markdown-body h4 .fa-link,.night .markdown-body h5 .fa-link,.night .markdown-body h6 .fa-link{color:#fff}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .fa-link,.markdown-body h2:hover .anchor .fa-link,.markdown-body h3:hover .anchor .fa-link,.markdown-body h4:hover .anchor .fa-link,.markdown-body h5:hover .anchor .fa-link,.markdown-body h6:hover .anchor .fa-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.night .markdown-body table tr{background-color:#5f5f5f}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.night .markdown-body table tr:nth-child(2n){background-color:#4f4f4f}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.night .markdown-body code,.night .markdown-body tt{color:#eee;background-color:hsla(0,0%,90.2%,.36)}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\A0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.markdown-body kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important}.markdown-body pre{border:inherit!important}.night .markdown-body pre{filter:invert(100%)}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.night .markdown-body .gist table tr:nth-child(2n){background-color:#ddd}.markdown-body code[data-gist-id]{background:none;padding:0;filter:invert(100%)}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.geo,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit}.night .markdown-body pre.graphviz .graph>polygon{fill:#333}.night .markdown-body pre.mermaid .sectionTitle,.night .markdown-body pre.mermaid .titleText,.night .markdown-body pre.mermaid text{fill:#fff}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.night .markdown-body .abc path{fill:#eee}.night .markdown-body .abc path.note_selected{fill:##4DD0E1}.night tspan{fill:#fefefe}.night pre rect{fill:transparent}.night pre.flow-chart path,.night pre.flow-chart rect{stroke:#fff}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body img{background-color:transparent}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;-webkit-transition:opacity .2s;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;-webkit-transition:opacity .2s;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.geo-map{width:100%;height:250px}.markmap-container{height:300px}.markmap-container>svg{width:100%;height:100%}.MJX_Assistive_MathML{display:none}.ui-infobar{position:relative;z-index:2;max-width:758px;margin-top:25px;margin-bottom:-25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:10000}.ui-toc-label{opacity:.9;background-color:#ccc;border:none}.ui-toc-label,.ui-toc .open .ui-toc-label{-webkit-transition:opacity .2s;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#5f5f5f}.ui-toc-label:focus{opacity:1;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;-webkit-transition:opacity .2s;transition:opacity .2s}.ui-toc-dropdown{margin-top:23px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.night .ui-toc-dropdown .nav>li>a:focus,.night .ui-toc-dropdown .nav>li>a:hover{color:#fff;border-left-color:#fff}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.night .ui-toc-dropdown .nav>.active:focus>a,.night .ui-toc-dropdown .nav>.active:hover>a,.night .ui-toc-dropdown .nav>.active>a{color:#fff;border-left:2px solid #fff}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.night .ui-toc-dropdown .nav>li>a{color:#aaa}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:50px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>a{padding-right:50px}.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:60px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>ul>li>a{padding-right:60px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>a:hover{padding-left:49px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>a:hover{padding-right:49px}.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>ul>li>ul>li>a:hover{padding-left:59px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>ul>li>ul>li>a:hover{padding-right:59px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active>a{padding-left:48px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.active>.nav>.nav>.active>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>.nav>.active:hover>a{padding-right:48px}.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>.nav>.active>.nav>.active>a{padding-left:58px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.active>.nav>.nav>.active>.nav>.active>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>.nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>.nav>.active>.nav>.active:hover>a{padding-right:58px}.markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,"\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3",Osaka,Meiryo,"\30E1\30A4\30EA\30AA",MS Gothic,"\FF2D\FF33   \30B4\30B7\30C3\30AF",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,"\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF",sans-serif}.markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang TC,Microsoft JhengHei,"\5FAE\8EDF\6B63\9ED1",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,"\5FAE\8EDF\6B63\9ED1UI",sans-serif}.markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang SC,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,"\5FAE\8F6F\96C5\9ED1UI",sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:rgba(0,0,0,.85)}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:3px;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:contain}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}small span{line-height:22px}small .dropdown{display:inline-block}small .dropdown a:focus,small .dropdown a:hover{text-decoration:none}.unselectable{-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-o-user-select:none;user-select:none}.night .navbar{background:#333;border-bottom-color:#333;color:#eee}.night .navbar a{color:#eee}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}.focus,:focus{outline:none!important}::-moz-focus-inner{border:0!important}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid"><h1 id="Self-Trigger-Lablog"><a class="anchor hidden-xs" href="#Self-Trigger-Lablog" title="Self-Trigger-Lablog"><i class="fa fa-link"></i></a>Self Trigger Lablog</h1><p>Authors: Naomi Gonzalez and Joshua O’Cain<br>
+Date: Sept 2025</p><hr><h2 id="Background"><a class="anchor hidden-xs" href="#Background" title="Background"><i class="fa fa-link"></i></a>Background</h2><h3 id="Original-Tamalero-ETROC-Readout-Configuration"><a class="anchor hidden-xs" href="#Original-Tamalero-ETROC-Readout-Configuration" title="Original-Tamalero-ETROC-Readout-Configuration"><i class="fa fa-link"></i></a>Original Tamalero ETROC Readout Configuration</h3><p>Tamalero operates the ETROCs data readout configuration with the following ETROC register values:</p><ul>
+<li><code>singlePort</code> = 0</li>
+<li><code>mergeTriggerData</code> = 1</li>
+<li><code>triggerGranularity</code> = 0</li>
+<li><code>serRateRight</code> = 0</li>
+<li><code>serRateLeft</code> = 0</li>
+</ul><blockquote>
+<p><em>Note:</em> <code>0</code> means false and <code>1</code> means true except for the rate registers. For the rate registers 0 = 320 Mbps; 1 = 640 Mbps; and 2 = 1280 Mbps</p>
+</blockquote><p><img src="https://codimd.web.cern.ch/uploads/upload_713b30c8e27252c278e259c8909b1b36.png" alt="" class="md-image md-image"><br>
+<strong>Fig 1:</strong> Schematic of trigger/data ports assignment in ETROC2 manual</p><p>Now what this actually means is that we operate with ETROC trigger/data ports assignments in configuration <code>(b)</code> in which both lpGBTs are receiving bits in their uplink (fig 1). The bits each lpGBT is set to receive are merged trigger and data bits on both lpGBTs; <strong>HOWEVER</strong>, <strong>because <code>triggerGranularity = 0</code> in reality that means both lpGBTs are only receiving data bits and zero trigger bits</strong> (one lpGBT is getting data from the left half of the chip and the other from the right half). The data bits are sent in 8 bit chunks for each elink on each lpGBT because the rate at which we operate is 320 Mbps (<code>serRateRight = 0</code> and <code>serRateLeft = 0</code>).</p><blockquote>
+<p><em>Note:</em> The firmware can also handle the other data rates if needed already</p>
+</blockquote><p>This implementation makes sense with the current software behavior because Tamalero is able to lock onto the 40 bit ETROC data frames on both lpGBTs through the existing ETROC decoders in the firmware which result in the following output when running test module:</p><p><img src="https://codimd.web.cern.ch/uploads/upload_4ad1b50f8cf3bf63e3b06070dcc85923.png" alt="" class="md-image md-image"><br>
+<strong>Fig 2:</strong> Module 204 with each elink locked in Tamalero, meaning each elink has successfully aligned with the etroc data stream</p><p><strong>Optional addition info:</strong><br>
+How the ETROC decoder works is that it aggregates the elink’s incoming 8 bit chunks until it has a 40 bit word, it then checks to see if this 40 bit word matches the expected bits for an ETROC filler frame. If not it will bitslip the 40 bit frame by one bit until it can align and lock onto an ETROC filler frame. Once the ETROC is locked, filler frames are suppressed by default and headers/trailers/data frames are output to the FIFO which is then able to read ETROC data from the PC.</p><h3 id="Original-Trigger-Capabilities-in-Tamalero--KCU105-FW"><a class="anchor hidden-xs" href="#Original-Trigger-Capabilities-in-Tamalero--KCU105-FW" title="Original-Trigger-Capabilities-in-Tamalero--KCU105-FW"><i class="fa fa-link"></i></a>Original Trigger Capabilities in Tamalero + KCU105 FW</h3><p>Currently when running in test beams, because we are only reading out data stream/bits (as demonstrated in the previous section), we need something else to provide an external L1A trigger when a hit is detected using a reference detector (in our case the MCP + osciillicope). Otherwise, the firmware can also currently generate an internal L1A on the KCU105 FW (this is used when we run charge injection test for example) but these internally generated L1A are created based on user input which Tamalero provides but <strong>if we want to trigger automatically based on every “hit” an ETROC sees, changes need to be made to the firmware and software</strong>.</p><hr><h2 id="Self-Trigger-Design"><a class="anchor hidden-xs" href="#Self-Trigger-Design" title="Self-Trigger-Design"><i class="fa fa-link"></i></a>Self Trigger Design</h2><p><strong>Goal:</strong> When an ETROC sees a hit, create a subsequent self trigger (L1A) automatically</p><p>In order to know when the ETROC sees a hit we must read-out the trigger bits/stream and not just the data bits/stream from the lpGBT. This means we would want to operate the ETROC with trigger/data ports assignments in configuration <code>(c)</code> in which one lpGBTs is receiving only the data bits/stream in their uplink while the other lpGBT is receiving only the trigger bits/stream in their uplink (fig 1).</p><p>The ETROC trigger stream is <code>0</code> unless a hit is seen at which case a <code>1</code> will appear in the bit stream. Given this information one might assume that in firmware we can simply pass the trigger bits into a new firmware block/module and generate an internal L1A whenever a <code>1</code> is seen in the trigger stream however this would result in a constant high rate of L1As. This is due to the fact that in the same trigger stream, at every bunch crossing <code>BCX</code>, (which is every 3564 clock cycles) the ETROC emits a flashing bit in the pattern <code>1</code> -&gt; <code>0</code> -&gt; <code>1</code> -&gt; <code>0</code> … The number of bits that flash is equal the the trigger data word size that is set using the <code>triggerGranularity</code> register on the ETROC.</p><p>This means the flashing bits need to be found and then masked in order to make sure we do not accidentally trigger on them. In order to find the flashing bits in the firmware, every 3564 clock cycles, we need to check if the full flashing pattern is seen in the elink window (full flashing pattern = trigger data word size) and if not seen we need to bitslip to auto align the flashing bits to the elink window, once locked we need to subsequently clear them. Afterwards it is then safe to trigger on every <code>1</code> seen on the trigger stream. For more details on the features and overall design view the image below (fig 3).</p><blockquote>
+<p><em>Note:</em> Like the original firmware, support for higher ETROC rates was also added and built in the new firmware.</p>
+</blockquote><p><img src="https://codimd.web.cern.ch/uploads/upload_e271e78687360dd8c211e367a456067f.png" alt="" class="md-image md-image"><br>
+<strong>Fig 3:</strong> High Level design overview of implemented self trigger solution in KCU105 firmware</p><blockquote>
+<p><em>Note:</em> With the implemented design it is also possible to run the self trigger only on specific ETROC quadrants because the design provides per bit granularity for the enable mask on the uplink but this is yet to be tested</p>
+</blockquote><hr><h2 id="Self-Trigger-Initial-Validation-Test"><a class="anchor hidden-xs" href="#Self-Trigger-Initial-Validation-Test" title="Self-Trigger-Initial-Validation-Test"><i class="fa fa-link"></i></a>Self Trigger Initial Validation Test</h2><p>In order to validate that the self trigger is working we wanted to confirm the following behaviors:</p><ul>
+<li>auto-aligning and locking to the flashing bits</li>
+<li>clearing the flashing bits</li>
+<li>correctly creating a self trigger</li>
+</ul><p>An ILA (Integrated Logic Analyzer) was made in the firmware to help probe the internal signals and see in real time the behavior of the ETROC and self trigger logic. Furthermore, for this test a Digital Module was used in order to avoid triggers due to cosmics and verify self trigger through charge injection.</p><h3 id="Procedure"><a class="anchor hidden-xs" href="#Procedure" title="Procedure"><i class="fa fa-link"></i></a>Procedure</h3><h4 id="Hardware-Set-Up"><a class="anchor hidden-xs" href="#Hardware-Set-Up" title="Hardware-Set-Up"><i class="fa fa-link"></i></a>Hardware Set Up</h4><p><img src="https://codimd.web.cern.ch/uploads/upload_8aaa7980917efe5856e5c1429d2bf7de.jpg" alt="" class="md-image md-image"><br>
+<img src="https://codimd.web.cern.ch/uploads/upload_fc9d3a3e418c03a508f1e5e877117e90.jpg" alt="" class="md-image md-image"><br>
+<strong>Fig 4+5:</strong> Hardware setup with uncovered module to provide cooling to the ETROC chips</p><h4 id="Setting-up-the-KCU105"><a class="anchor hidden-xs" href="#Setting-up-the-KCU105" title="Setting-up-the-KCU105"><i class="fa fa-link"></i></a>Setting up the KCU105</h4><p>On <code>naomi@strange</code> run the terminal commands (Computer in Indara’s lab):</p><ul>
+<li><code>Vivado20211</code></li>
+<li><code>vivado</code></li>
+</ul><blockquote>
+<p><em>Note:</em> These commands are custom aliases in naomi’s personal account, if you would like to replicate this please reach out to know the full command (command is different if you are using etl 904 computer vs bu strange)</p>
+</blockquote><p>In the vivado GUI:</p><ul>
+<li>Under <code>Tasks</code> click <code>Open Hardware Manager</code></li>
+<li>In Hardware Manager page <code>Open target</code> &gt; <code>Auto Connect</code></li>
+<li>In Hardware window right click:
+<ul>
+<li><code>xilinx_tcf/Digilent/210308AB9AC5</code> &gt; <code>Close Target</code></li>
+<li><code>xilinx_tcf/Digilent/210308AB9ACD</code> &gt; <code>Open Target</code></li>
+<li><code>xcku040_0_1</code> &gt; <code>Program Device</code>
+<ul>
+<li>Choose the correct files:
+<ul>
+<li>Bitstream file: <code>/home/naomi/repos/module_test_fw/bin/etl_test_fw-v3.2.4-hogA060825-dirty/etl_test_fw-v3.2.4-hogA060825-dirty.bin</code></li>
+<li>Debug probe file: <code>/home/naomi/repos/module_test_fw/bin/etl_test_fw-v3.2.4-hogA060825-dirty/etl_test_fw-v3.2.4-hogA060825-dirty.ltx</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><blockquote>
+<p><em>Note:</em> <code>KCU 10</code> is <code>210308AB9ACD</code> and <code>KCU 11</code> is <code>210308AB9AC5</code>. All self trigger test were done on <code>KCU 10</code> (if using etl 904 computer there should only be one KCU connected to the PC so keep that target open)</p>
+</blockquote><h4 id="Setting-up-Tamalero"><a class="anchor hidden-xs" href="#Setting-up-Tamalero" title="Setting-up-Tamalero"><i class="fa fa-link"></i></a>Setting up Tamalero</h4><p>On <code>strange</code> terminal run the following commands using the <code>self_trigger_tests</code> branch of tamalero:</p><ul>
+<li><code>source setup.sh</code></li>
+<li><code>python test_tamalero.py --kcu 192.168.0.10 --power_up --verbose --adcs</code></li>
+<li><code>ipython3 test_module.py -i -- --kcu 192.168.0.10 --moduleid &lt;Module ID No.&gt; --test_chip --self_trigger --vth_sftg &lt;Threshold DAC for self trigger&gt; --row &lt;pixel row&gt; --col &lt;pixel column&gt;</code></li>
+</ul><p>Importantly, however, the user should chose a Threshold DAC value that are above the baseline to avoid large numbers of triggers near the baseline noise level. This will cause the dumping of headers and trailer to take an extremely long period of time. Additionally, setting the threshold far away from the baseline can prevent “double triggers” caused by the ETROC charge injection status being set on for two clock cycles instead of one.</p><p>To run a single charge injection using interactive python once the script is done running, use</p><p><code>rb.kcu.write_node("READOUT_BOARD_%s.QINJ_PULSE" % 0, 0x01)</code></p><p>To view the event counter, use</p><p><code>print(kcu.read_node('READOUT_BOARD_0.EVENT_CNT').value())</code></p><h3 id="Explanation"><a class="anchor hidden-xs" href="#Explanation" title="Explanation"><i class="fa fa-link"></i></a>Explanation</h3><p>The following portrays the important steps that the modified charge injection script is doing in an example where it only sends a single charge:</p><ul>
+<li>
+<p>Moving the ETROC into bypass mode to manually manipulate the Threshold DAC to 1000 which is on the higher end in order to make sure the digital module does not trigger on noise</p>
+<ul>
+<li><code>etroc.bypass_THCal()</code></li>
+<li><code>etroc.wr_reg('DAC', 1000, broadcast=True)</code></li>
+</ul>
+</li>
+<li>
+<p>Validating that initially the ETROC has locked elinks for both lpgbts</p>
+<ul>
+<li><code>rb.modules[0].show_status()</code></li>
+</ul>
+</li>
+<li>
+<p>Using <code>etroc.wr_reg()</code>, Writing to the following ETROC registers to move use to configuration <code>c</code> in fig 1:</p>
+<ul>
+<li><code>singlePort</code> = 0</li>
+<li><code>mergeTriggerData</code> = 0</li>
+<li><code>triggerGranularity</code> = 4 (this sets 8 bit trigger word size)</li>
+</ul>
+</li>
+<li>
+<p>Verifying that after writing to these registers one elink unlocks using, again, <code>rb.modules[0].show_status()</code>:<br>
+<img src="https://codimd.web.cern.ch/uploads/upload_68c5904be0d8041e698e2c15c2655a33.png" alt="" class="md-image md-image"><br>
+<strong>Fig 6:</strong> Elink 2 unlocking from the data stream due to it now outputing trigger stream bits</p>
+</li>
+<li>
+<p>Selecting the input of the self trigger to be the same uplink as the lpgbt which had an elink unlock</p>
+<ul>
+<li><code>kcu.write_node(f'READOUT_BOARD_{args.rb}.TRIG_UPLINK_SEL', 0)</code></li>
+<li>Note that in the above image, the lpGBTs are indexed from 1, but the <code>TRIG_UPLINK_SEL</code> register indexes the links from 0. So, the command above (setting <code>TRIG_UPLINK_SEL</code> to 0) would set lpGBT 1 to host the trigger uplink path.</li>
+<li>At this point you can visually see the flashing bits in the unaligned stream and aligned stream<br>
+<img src="https://codimd.web.cern.ch/uploads/upload_f6034e647b088563c149129f3b748074.png" alt="" class="md-image md-image"><br>
+<strong>Fig 7:</strong> ILA image of unaligned flashing bit between two clock cycles (509 &amp; 510) on elink 2 in which one clock cycle we see 0x03 (0b0000_0011) and in the following we see 0xfc (0b1111_1100) which are the 8 flashing bits but they are misaligned. Later in clock cycle 512 we see the aligned stream with the value 0xff (1111_1111) on elink 2. This alignment means the flashing bit pattern and trigger stream is locked as seen with the locked signal outputing 0x4 (0b100) in which each bit represents an elink starting with elink 0 = index 0.</li>
+</ul>
+</li>
+</ul><blockquote>
+<p><em>Note:</em> the clock cycle numbers in ILA images are just relative to when we are probing the singal <strong>THEY DO NOT REPRESENT TIME SINCE PROGRAM HAS STARTED</strong> each time we reprobe the clock cycle numbers start again</p>
+</blockquote><ul>
+<li>
+<p>Enabling the whole trigger mask (see last note in Self Trigger Design section for more detail)</p>
+<ul>
+<li><code>kcu.write_node(f'READOUT_BOARD_{args.rb}.TRIG_ENABLE_MASK_{i}', 0xffffffff)</code></li>
+</ul>
+</li>
+<li>
+<p>Setting the self trigger to clear all the flashing bits in every elink</p>
+<ul>
+<li><code>kcu.write_node(f'READOUT_BOARD_{args.rb}.TRIG_CLEAR', 0x0fffffff)</code></li>
+<li>At this point you can visually see the flashing bits being cleared in the aligned stream<br>
+<img src="https://codimd.web.cern.ch/uploads/upload_fae084a58c70886a1ad718f390a4b363.png" alt="" class="md-image md-image"><br>
+<strong>Fig 8:</strong> Aligned flashing bits in elink 2 are cleared to 0 now after enabling <code>TRIG_CLEAR</code></li>
+</ul>
+</li>
+<li>
+<p>Enabling the elink that was previously unlocked for self trigger</p>
+<ul>
+<li><code>kcu.write_node(f'READOUT_BOARD_{args.rb}.TRIG_ELINK_ENABLE', 1 &lt;&lt; &lt;elink_num&gt;)</code></li>
+</ul>
+</li>
+<li>
+<p>Reseting self trigger firmware module</p>
+<ul>
+<li><code>kcu.write_node(f'READOUT_BOARD_{args.rb}.SELF_TRIG_RESET', 1)</code></li>
+<li><code>kcu.write_node(f'READOUT_BOARD_{args.rb}.SELF_TRIG_RESET', 0)</code></li>
+</ul>
+</li>
+<li>
+<p>Viewing the current event counter and clearing it (the event counter holds the number of L1As issued)</p>
+<ul>
+<li><code>kcu.read_node(f'READOUT_BOARD_{args.rb}.EVENT_CNT').value()</code></li>
+<li><code>kcu.write_node(f'READOUT_BOARD_{args.rb}.EVENT_CNT_RESET', 1)</code></li>
+<li><code>kcu.write_node(f'READOUT_BOARD_{args.rb}.EVENT_CNT_RESET', 0)</code></li>
+<li><code>kcu.read_node(f'READOUT_BOARD_{args.rb}.EVENT_CNT').value()</code></li>
+</ul>
+</li>
+<li>
+<p>Setting up the charge injection on the etroc and enabling the trigger</p>
+<ul>
+<li><code>etroc.QInj_set(q, delay, L1Adelay, row=i, col=j, broadcast = False)</code></li>
+<li><code>kcu.write_node(f'READOUT_BOARD_{args.rb}.TRIG_ENABLE', 1)</code></li>
+<li><code>etroc.wr_reg('DAC', 450, row=i, col=j, broadcast=False)</code></li>
+</ul>
+</li>
+<li>
+<p>Sending charge injection pulse</p>
+<ul>
+<li><code>rb.kcu.write_node(f'READOUT_BOARD_{args.rb}.QINJ_PULSE', 1)</code></li>
+<li>We can visually view the self trigger pulse after sending the charge injection<br>
+<img src="https://codimd.web.cern.ch/uploads/upload_5663db5b896e67132a7cecd71fb51b7a.png" alt="" class="md-image md-image"><br>
+<strong>Fig 9:</strong> Seeing a trigger being auto generated after seeing a hit in the trigger stream of elink 2</li>
+</ul>
+</li>
+<li>
+<p>Verifying pulse caused the event counter to increase (the event counter reads number of L1As)</p>
+<ul>
+<li><code>kcu.read_node(f'READOUT_BOARD_{args.rb}.EVENT_CNT').value() </code></li>
+</ul>
+</li>
+</ul><blockquote>
+<p><em>Note:</em> All testing used digital only modules as we did not want to trigger on noise and focused on understanding the limits and behavior of the self trigger feature.</p>
+</blockquote><h2 id="Results"><a class="anchor hidden-xs" href="#Results" title="Results"><i class="fa fa-link"></i></a>Results</h2><h3 id="Per-Module-Behavior"><a class="anchor hidden-xs" href="#Per-Module-Behavior" title="Per-Module-Behavior"><i class="fa fa-link"></i></a>Per Module Behavior</h3><p>All tests done using all available ETROCs on the PCB. Threshold DAC settings were chosen to be close to the middle of the S-curve of a standard charge injection test using 25 fC. Injections performed when testing self-triggering were also performed using 25 fC injections. Due to the possibility of heat affecting triggering, we use the setup discribed in this lablog, exposing the ETROCs directly to a cooling fan. The setup is depicted above in the Hardware Setup section.</p><ul>
+<li>
+<p>Module 400013</p>
+<ul>
+<li>Module PCBv4.4</li>
+<li>4 ETROCv2.03s on PCB, able to communicate with 0, 1, 3</li>
+<li>Uplinks using LPBPT 2
+<ul>
+<li>ETROC 0 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mo" id="MathJax-Span-3" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-1">\rightarrow</script></span> eLink 0</li>
+<li>ETROC 2 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-4" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-5"><span class="mo" id="MathJax-Span-6" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-2">\rightarrow</script></span> eLink 2</li>
+<li>ETROC 3 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-7" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-8"><span class="mo" id="MathJax-Span-9" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-3">\rightarrow</script></span> eLink 20</li>
+</ul>
+</li>
+<li>Threshold DACs used
+<ul>
+<li>ETROC 0 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-10" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-11"><span class="mo" id="MathJax-Span-12" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-4">\rightarrow</script></span> 480</li>
+<li>ETROC 2 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-5-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-13" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-14"><span class="mo" id="MathJax-Span-15" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-5">\rightarrow</script></span> 360</li>
+<li>ETROC 3 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-16" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-17"><span class="mo" id="MathJax-Span-18" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-6">\rightarrow</script></span> 520</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Module 204</p>
+<ul>
+<li>Module PCBv2.0</li>
+<li>4 ETROCv2.01s on PCB, able to communicate with all, though occasional issues with 2</li>
+<li>Trigger Uplinks using LPBPT 1
+<ul>
+<li>ETROC 0 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-7-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-19" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-20"><span class="mo" id="MathJax-Span-21" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-7">\rightarrow</script></span> eLink 2</li>
+<li>ETROC 1 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-8-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-22" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-23"><span class="mo" id="MathJax-Span-24" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-8">\rightarrow</script></span> eLink 20</li>
+<li>ETROC 2 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-9-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-25" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-26"><span class="mo" id="MathJax-Span-27" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-9">\rightarrow</script></span> eLink 0</li>
+<li>ETROC 3 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-10-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-28" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-29"><span class="mo" id="MathJax-Span-30" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-10">\rightarrow</script></span> eLink 22</li>
+</ul>
+</li>
+<li>Threshold DACs used
+<ul>
+<li>ETROC 0 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-11-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-31" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-32"><span class="mo" id="MathJax-Span-33" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-11">\rightarrow</script></span> 550</li>
+<li>ETROC 1 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-12-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-34" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-35"><span class="mo" id="MathJax-Span-36" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-12">\rightarrow</script></span> 550</li>
+<li>ETROC 2 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-13-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-37" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-38"><span class="mo" id="MathJax-Span-39" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-13">\rightarrow</script></span> 600</li>
+<li>ETROC 3 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-14-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>&amp;#x2192;</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-40" style="width: 1.181em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.949em, 1000.925em, 2.666em, -999.997em); top: -2.559em; left: 0em;"><span class="mrow" id="MathJax-Span-41"><span class="mo" id="MathJax-Span-42" style="font-family: STIXGeneral-Regular;">→</span></span><span style="display: inline-block; width: 0px; height: 2.564em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-left-width: 0px; border-left-style: solid; border-left-color: currentcolor; width: 0px; height: 0.628em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">→</mo></math></span></span><script type="math/tex" id="MathJax-Element-14">\rightarrow</script></span> 425</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><p>We were able to verify that if we sent 300 charges, 300 l1as were correctly sent for each etroc on the tested modules.</p><h3 id="Double-Trigger"><a class="anchor hidden-xs" href="#Double-Trigger" title="Double-Trigger"><i class="fa fa-link"></i></a>Double Trigger</h3><p>As previously described in the “Setting up Tamalero” section, we seem to be observing a double trigger on some of the modules when sending one charge injeciton pulse which look like the figure below in the ILA (fig 10).<br>
+<img src="https://codimd.web.cern.ch/uploads/upload_d0efdb094be640299362c99a01a3f292.png" alt="" class="md-image md-image"><br>
+<strong>Fig 10:</strong> ILA output when observing a double trigger on the ETROC trigger stream</p><p>We noticed that when we increase the Vth the double trigger effect stops, given this information we assume that the double trigger occurs because of the way the capacitor on the ETROC discharges the requested charge. There must be an instance where the voltage peaks above the Vth to cause a second trigger after the inital disharge (fig 11).<br>
+<img src="https://codimd.web.cern.ch/uploads/upload_629cb1f6e3a1e03aa59292ddd2ae13bd.png" alt="" class="md-image md-image"><br>
+<strong>Fig 11:</strong> Theorized capacitor disharge behavior that is causing the double trigger and fix</p><h2 id="Next-steps"><a class="anchor hidden-xs" href="#Next-steps" title="Next-steps"><i class="fa fa-link"></i></a>Next steps</h2><h3 id="Ideas"><a class="anchor hidden-xs" href="#Ideas" title="Ideas"><i class="fa fa-link"></i></a>Ideas</h3><p>The following are things we would like to accomplish:</p><ul>
+<li>Further investigate the behavior of the self trigger on multiple ETROCs
+<ul>
+<li>Catagorize the behviors with different charge or number of chages being sent more explicitly per module/etroc</li>
+<li>Finding ideal Vth and DAC values for each module/etroc</li>
+<li>Further investigate what are the self trigger behavior differences with ETROC 2.01 and ETROC 2.03</li>
+</ul>
+</li>
+<li>Test self trigger with a proper cooling system to see if this stops the infinite trigger behvior that sometimes occurs</li>
+<li>Update the <code>rb.modules[0].show_status()</code> function to show if en elink is locked in the data stream mode or locked into the trigger stream mode</li>
+<li>Find the correct self trigger delay to readout the hit data coming from self trigger</li>
+<li>Running self trigger tests with hybrids</li>
+</ul><h3 id="Dividing-work"><a class="anchor hidden-xs" href="#Dividing-work" title="Dividing-work"><i class="fa fa-link"></i></a>Dividing work</h3><ul>
+<li>Insung: update rb.modules[0].show_status()</li>
+<li>Hayden and Leo: testing self trigger with charge injection at 904</li>
+<li>Talk with Caleb/bobby: constant temperture monitoring / event counter monitoring</li>
+</ul></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#Self-Trigger-Lablog" title="Self Trigger Lablog">Self Trigger Lablog</a><ul class="nav">
+<li class=""><a href="#Background" title="Background">Background</a><ul class="nav">
+<li class=""><a href="#Original-Tamalero-ETROC-Readout-Configuration" title="Original Tamalero ETROC Readout Configuration">Original Tamalero ETROC Readout Configuration</a></li>
+<li class=""><a href="#Original-Trigger-Capabilities-in-Tamalero--KCU105-FW" title="Original Trigger Capabilities in Tamalero + KCU105 FW">Original Trigger Capabilities in Tamalero + KCU105 FW</a></li>
+</ul>
+</li>
+<li class=""><a href="#Self-Trigger-Design" title="Self Trigger Design">Self Trigger Design</a></li>
+<li class=""><a href="#Self-Trigger-Initial-Validation-Test" title="Self Trigger Initial Validation Test">Self Trigger Initial Validation Test</a><ul class="nav">
+<li class=""><a href="#Procedure" title="Procedure">Procedure</a></li>
+<li class=""><a href="#Explanation" title="Explanation">Explanation</a></li>
+</ul>
+</li>
+<li class=""><a href="#Results" title="Results">Results</a><ul class="nav">
+<li class=""><a href="#Per-Module-Behavior" title="Per Module Behavior">Per Module Behavior</a></li>
+<li class=""><a href="#Double-Trigger" title="Double Trigger">Double Trigger</a></li>
+</ul>
+</li>
+<li class=""><a href="#Next-steps" title="Next steps">Next steps</a><ul class="nav">
+<li><a href="#Ideas" title="Ideas">Ideas</a></li>
+<li class=""><a href="#Dividing-work" title="Dividing work">Dividing work</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu" style="">
+    <a class="expand-toggle expand-all" href="#">Expand all</a>
+    <a class="expand-toggle collapse-all" href="#" style="display: none;">Collapse all</a>
+    <a class="back-to-top" href="#">Back to top</a>
+    <a class="go-to-bottom" href="#">Go to bottom</a>
+</div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#Self-Trigger-Lablog" title="Self Trigger Lablog">Self Trigger Lablog</a><ul class="nav">
+<li class=""><a href="#Background" title="Background">Background</a><ul class="nav">
+<li class=""><a href="#Original-Tamalero-ETROC-Readout-Configuration" title="Original Tamalero ETROC Readout Configuration">Original Tamalero ETROC Readout Configuration</a></li>
+<li class=""><a href="#Original-Trigger-Capabilities-in-Tamalero--KCU105-FW" title="Original Trigger Capabilities in Tamalero + KCU105 FW">Original Trigger Capabilities in Tamalero + KCU105 FW</a></li>
+</ul>
+</li>
+<li class=""><a href="#Self-Trigger-Design" title="Self Trigger Design">Self Trigger Design</a></li>
+<li class=""><a href="#Self-Trigger-Initial-Validation-Test" title="Self Trigger Initial Validation Test">Self Trigger Initial Validation Test</a><ul class="nav">
+<li class=""><a href="#Procedure" title="Procedure">Procedure</a></li>
+<li class=""><a href="#Explanation" title="Explanation">Explanation</a></li>
+</ul>
+</li>
+<li class=""><a href="#Results" title="Results">Results</a><ul class="nav">
+<li class=""><a href="#Per-Module-Behavior" title="Per Module Behavior">Per Module Behavior</a></li>
+<li class=""><a href="#Double-Trigger" title="Double Trigger">Double Trigger</a></li>
+</ul>
+</li>
+<li class=""><a href="#Next-steps" title="Next steps">Next steps</a><ul class="nav">
+<li><a href="#Ideas" title="Ideas">Ideas</a></li>
+<li class=""><a href="#Dividing-work" title="Dividing work">Dividing work</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu" style="">
+    <a class="expand-toggle expand-all" href="#">Expand all</a>
+    <a class="expand-toggle collapse-all" href="#" style="display: none;">Collapse all</a>
+    <a class="back-to-top" href="#">Back to top</a>
+    <a class="go-to-bottom" href="#">Go to bottom</a>
+</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha256-kJrlY+s09+QoWjpkOrXXwhxeaoDz9FW5SaxF8I0DibQ=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
