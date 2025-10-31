@@ -4,3 +4,7 @@
 [submodule "System-Testing/Software-testing"]
 	path = System-Testing/Software-testing
 	url = ssh://git@gitlab.cern.ch:7999/cms-etl-electronics/module_test_sw.git
+[submodule "System-Testing/Software-daq"]
+	path = System-Testing/Software-daq
+	url = ssh://git@gitlab.cern.ch:7999/cms-etl-electronics/ETL_TestingDAQ.git
+	branch = Nov2025
